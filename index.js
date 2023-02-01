@@ -17,7 +17,6 @@ const fileStorageEngine = multer.diskStorage({
 
 const upload = multer({ storage: fileStorageEngine });
 
-
 app.post("/add-data" , controllers.addData);
 app.put("/update-data", upload.single('file'), controllers.updateData);
 app.delete("/delete-data", controllers.deleteData);
